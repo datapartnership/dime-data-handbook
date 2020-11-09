@@ -1,7 +1,7 @@
 % ----------------------------------------------------------------------------------------------
 % Setting the stage for successful data work
 
-\begin{fullwidth}
+
 In order to do effective data work in a team environment,
 you need to structure your workflow in advance.
 Preparation for collaborative data work begins long before you acquire any data,
@@ -26,7 +26,7 @@ will be able to understand and interact with it easily.
 The third section provides guidelines for ensuring
 privacy and security when working with confidential data.
 
-\end{fullwidth}
+
 
 % ----------------------------------------------------------------------------------------------
 % ----------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@ and you should have a \textbf{password-protected} login.\index{password protecti
 Make sure your computer is backed up to prevent information loss.\index{data backup}
 Follow the \textbf{3-2-1 rule}: maintain 3 copies of all original or irreplaceable data,
 on at least 2 different hardware devices you have access to,
-with 1 offsite storage method.\sidenote{
+with 1 offsite storage method.\footnote{
   \url{https://dimewiki.worldbank.org/Data_Storage}}
 Chapter 4 provides a protocol for implementing this.
 
@@ -83,7 +83,7 @@ On MacOS this will be something like \path{/users/username/git/project/...},
 and on Windows, \path{C:/users/username/git/project/...}.
 Use forward slashes (\texttt{/}) in file paths for folders,
 and whenever possible use only the 26 English characters, numbers,
-dashes (\texttt{-}), and underscores (\texttt{\_}) in folder names and filenames.\sidenote{
+dashes (\texttt{-}), and underscores (\texttt{\_}) in folder names and filenames.\footnote{
   \url{https://dimewiki.worldbank.org/Naming_Conventions}}\index{filenames}
 For emphasis: \textit{always} use forward slashes (\texttt{/})
 in file paths in code, just like in internet addresses.
@@ -96,7 +96,7 @@ since otherwise you will not be able to reliably transfer the instructions
 for replicating or carrying out your analytical work.
 
 When you are working with others, you will most likely be using
-some kind of \textbf{file sharing} software.\sidenote{
+some kind of \textbf{file sharing} software.\footnote{
   \url{https://dimewiki.worldbank.org/Collaboration_Tools}}
   \index{file sharing}
 The exact services you use will depend on your tasks,
@@ -108,7 +108,7 @@ Sync forces everyone to have the same version of every file at the same time,
 which makes simultaneous editing difficult but other tasks easier.
 \textbf{Distributed version control} is another method,
 commonly implemented through systems like GitHub, GitLab, and Bitbucket
-that interact with Git.\sidenote{
+that interact with Git.\footnote{
 	\textbf{Git:} A distributed version control system for collaborating on and tracking changes to code as it is written.}
   \index{version control}
 Distributed version control allows everyone
@@ -153,7 +153,7 @@ It is therefore easy to miss or lose communications from the past when they have
 Everything with future relevance that is communicated over email or any other instant medium
 -- such as, for example, decisions about research design --
 should immediately be recorded in a system that is designed to keep permanent records.
-We call these systems collaboration tools, and there are several that are very useful.\sidenote{
+We call these systems collaboration tools, and there are several that are very useful.\footnote{
   \url{https://dimewiki.worldbank.org/Collaboration_Tools}}
   \index{collaboration tools}
 
@@ -226,7 +226,7 @@ even if different releases contain changes that would break your code
 or change your results.
   \index{software versions}
 DIME Analytics developed the command \texttt{ieboilstart} in the \texttt{ietoolkit} package
-to support version and settings stability in Stata.\sidenote{
+to support version and settings stability in Stata.\footnote{
   \url{https://dimewiki.worldbank.org/ieboilstart}}
 If your project requires more than one programming language,
 for example if you analyze your data in one language but visualize your results in another,
@@ -242,10 +242,10 @@ one of the two most popular statistical software packages: R or Stata.
 (If you are using another language, like Python,
 many of the same principles apply but the specifics will be different.)
 Most of your code work will be done in a code editor.
-If you are working in R, \textbf{RStudio} is the typical choice.\sidenote{
+If you are working in R, \textbf{RStudio} is the typical choice.\footnote{
   \url{https://www.rstudio.com}}
 For Stata, the built-in do-file editor is the most widely adopted code editor.
-You might also consider using an external editor for your R or Stata code.\sidenote{
+You might also consider using an external editor for your R or Stata code.\footnote{
   \url{https://dimewiki.worldbank.org/Code_Editors}}
 These editors offer great accessibility and quality features.
 For example, they can access an entire directory -- rather than a single file --
@@ -304,17 +304,17 @@ so it's important to organize your data work
 and follow best practices from the beginning.
 You should agree with your team on a specific directory structure,
 and set it up at the beginning of the project.
-You should also agree on a file naming convention.\sidenote{
+You should also agree on a file naming convention.\footnote{
 	\url{https://dimewiki.worldbank.org/Naming_Conventions}}
 This will help you to easily find project files and
 ensure that all team members can easily run the same code.
 
 To support consistent folder organization at DIME,
-DIME Analytics created \texttt{iefolder}\sidenote{
+DIME Analytics created \texttt{iefolder}\footnote{
   \url{https://dimewiki.worldbank.org/iefolder}}
 as a part of our \texttt{ietoolkit} package.\index{iefolder}\index{ietoolkit}
 This Stata command sets up a pre-standardized folder structure
-for what we call the \texttt{DataWork} folder.\sidenote{
+for what we call the \texttt{DataWork} folder.\footnote{
   \url{https://dimewiki.worldbank.org/DataWork_Folder}}
 The \texttt{DataWork} folder includes folders for all the steps of a typical project.
   \index{DataWork folder}
@@ -337,7 +337,7 @@ that move the data through this progression,
 and for the final analytical outputs.
 The \texttt{ietoolkit} package also includes the \texttt{iegitaddmd} command,
 which can place \texttt{README.md} placeholder files in your folders so that
-your folder structure can be shared using Git.\sidenote{
+your folder structure can be shared using Git.\footnote{
 	Git only tracks files, so empty folders
 	-- which most folders are in the beginning of a project --
 	are ignored if placeholder files are not used,
@@ -421,7 +421,7 @@ to give concrete examples of the required code elements, organization and struct
 
 To be readable, code must be well-documented.
 Start by adding a code header to every file.\index{code header}
-A code header is a long \textbf{comment}\sidenote{
+A code header is a long \textbf{comment}\footnote{
   \textbf{Comments:} Code components that have no function to the computer,
   but describe in plain language for humans to read
   what the code is supposed to do.}\index{code comments}
@@ -486,7 +486,7 @@ This is an arbitrary limit, just like the common practice of limiting code lines
 it seems to be ``enough but not too much'' for most purposes.
 
 \subsection{Working with a master script}
-To bring all these smaller code files together, you must maintain a master script.\sidenote{
+To bring all these smaller code files together, you must maintain a master script.\footnote{
 	\url{https://dimewiki.worldbank.org/Master\_Do-files}}
   \index{master script}
 A master script is the map of all your project's data work
@@ -561,7 +561,7 @@ or for release of the code to the general public.
 
 Anytime you are working with original data in a development research project,
 you are almost certainly handling data that include
-\textbf{personally-identifying information (PII)}.\index{personally-identifying information (PII)}\sidenote{
+\textbf{personally-identifying information (PII)}.\index{personally-identifying information (PII)}\footnote{
 	\textbf{Personally-identifying information:} any piece or set of information
 	that can be used to identify an individual research subject.
 	\url{https://dimewiki.worldbank.org/Protecting_Human_Research_Subjects}}
@@ -581,7 +581,7 @@ you will sometimes need to transfer and work with PII information,
 and sometimes you will prefer to remove or mask PII
 before transferring or working with data.
 There is no one-size-fits-all solution to determine what is PII,
-research teams have to use careful judgment in each case to avoid statistical disclosure.\sidenote{
+research teams have to use careful judgment in each case to avoid statistical disclosure.\footnote{
 	\url{https://dimewiki.worldbank.org/Data_Release}}\index{statistical disclosure}\index{data release}
 It is important to keep in mind that data privacy principles apply
 not only for the respondent giving you the information
@@ -590,12 +590,12 @@ but also for their household members or other individuals who are included in th
 In all cases where confidential information is involved,
 you must make sure that you adhere to several core principles.
 These include ethical approval, participant consent,
-data security, and participant privacy.\sidenote{
-  See \citet{baldwin2017reforming} for an example.}
+data security, and participant privacy.\footnote{
+  See \cite{baldwin2017reforming} for an example.}
 If you are a US-based researcher, you will become familiar
-with a set of governance standards known as ``The Common Rule''.\sidenote{\citet{bierer2017revised}}
+with a set of governance standards known as ``The Common Rule''.\footnote{\cite{bierer2017revised}}
 If you interact with European institutions or persons,
-you will also become familiar with the General Data Protection Regulation (GDPR),\sidenote{
+you will also become familiar with the General Data Protection Regulation (GDPR),\footnote{
 	\url{https://gdpr-info.eu}}
 a set of regulations governing \textbf{data ownership} and privacy standards.\index{data ownership}
 No matter who you are or what exact legal requirements you face,
@@ -603,24 +603,24 @@ the core principles and practices you need to consider will always be similar.
 
 \subsection{Obtaining ethical approval and consent}
 
-Most of the field research done in development involves human subjects.\sidenote{
+Most of the field research done in development involves human subjects.\footnote{
 	\url{https://dimewiki.worldbank.org/Human\_Subjects\_Approval}}
 \index{human subjects}
 As a researcher, you are asking people to trust you with personal information about themselves:
 where they live, how rich they are, whether they have committed or been victims of crimes,
 their names, their national identity numbers, and all sorts of other data.
 PII data carries strict expectations about data storage and handling,
-and it is the responsibility of the research team to satisfy these expectations.\sidenote{
+and it is the responsibility of the research team to satisfy these expectations.\footnote{
 	\url{https://dimewiki.worldbank.org/Research\_Ethics}}
-Your donor or employer will most likely require you to hold a certification from a respsected source.\sidenote{
+Your donor or employer will most likely require you to hold a certification from a respsected source.\footnote{
 	\url{https://dimewiki.worldbank.org/Protecting\_Human\_Research\_Subjects}}
 
 For almost all such data collection and research activities,
-you will be required to complete some form of \textbf{Institutional Review Board (IRB)} process.\sidenote{
+you will be required to complete some form of \textbf{Institutional Review Board (IRB)} process.\footnote{
 	\textbf{Institutional Review Board (IRB):} An institution formally responsible for ensuring that research meets ethical standards.}
 \index{institutional review board (IRB)}
 Most commonly this consists of a formal application for approval of a specific
-protocol for consent, data collection, and data handling.\sidenote{
+protocol for consent, data collection, and data handling.\footnote{
   \url{https://dimewiki.worldbank.org/IRB\_Approval}}
 Which IRB has authority over your project is not always apparent,
 particularly if some institutions do not have their own.
@@ -645,7 +645,7 @@ All survey instruments must include a module in which the sampled respondent gra
 Research participants must be informed of the purpose of the research,
 what their participation will entail in terms of duration and any procedures,
 any foreseeable benefits or risks,
-and how their identity will be protected.\sidenote{
+and how their identity will be protected.\footnote{
 	\url{https://dimewiki.worldbank.org/Informed_Consent}}
 There are special additional protections in place for vulnerable populations,
 such as minors, prisoners, and people with disabilities,
@@ -667,7 +667,7 @@ you should not have any issues complying with these regulations.
 
 In order to safeguard PII data and protect respondent privacy,
 you must set up a secure data system from the outset of a project.
-Secure data storage and transfer are ultimately your personal responsibility.\sidenote{
+Secure data storage and transfer are ultimately your personal responsibility.\footnote{
 	\url{https://dimewiki.worldbank.org/Data\_Security}}
 Later chapters will discuss how to properly protect your data depending on
 which method you are using to acquire, store or share data.
@@ -684,7 +684,7 @@ for shared accounts with your colleagues.
 
 Second, all machines that stores confidential data
 should have \textbf{hard disk encryption} enabled,
-if available in the operative system used.\sidenote{
+if available in the operative system used.\footnote{
 	\textbf{Encryption:} Methods which ensure that files are unreadable even if laptops are stolen, databases are hacked,
   or any other type of unauthorized access is obtained.
 	\url{https://dimewiki.worldbank.org/Encryption}}
@@ -713,7 +713,7 @@ specific to different stages of data work in Chapter 4,
 but when setting up a software environment for you and your team,
 make sure that you have a solution for creating encrypted folders on your computers.
 DIME uses Veracrypt for encrypted folders,
-our protocols are available as part of the DIME Research Standards.\sidenote{
+our protocols are available as part of the DIME Research Standards.\footnote{
   \url{https://github.com/worldbank/dime-standards}}
 
 Handling confidential data properly will always add to your workload.
@@ -746,10 +746,10 @@ This data set should always be used when possible.
 The \textbf{final de-identification} process involves
 making a decision about the trade-off between
 risk of disclosure and utility of the data
-before publicly releasing a dataset.\sidenote{
+before publicly releasing a dataset.\footnote{
 	\url{https://dimewiki.worldbank.org/De-identification}}
 
-Finally, it is essential to have an end-of-life plan for data even before it is acquired.\sidenote{
+Finally, it is essential to have an end-of-life plan for data even before it is acquired.\footnote{
   \url{https://dimewiki.worldbank.org/Data_Storage}}
 This includes plans for how to transfer access and control to a new person joining the team,
 and how to revoke that access when someone is leaving the team.

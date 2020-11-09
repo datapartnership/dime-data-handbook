@@ -1,6 +1,6 @@
 %-----------------------------------------------------------------------------------------------
 
-\begin{fullwidth}
+
 The first step in the data workflow is to establish a measurement framework.
 This requires understanding your project's data requirements
 and how to structure the required data to answer the research questions.
@@ -36,7 +36,7 @@ which are tools for assessing the measurement ability of
 the framework and any randomization you undertake.
 
 
-\end{fullwidth}
+
 
 %-----------------------------------------------------------------------------------------------
 
@@ -47,8 +47,8 @@ These could be data from multiple survey rounds,
 data acquired from different partners
 (such as administrative data, implementation data, sensor data),
 technological tools like satellite imagery or web scraping,
-or complex combinations of these and other sources.\sidenote{
-  See \citet{kondylis2018speed} for an example.}
+or complex combinations of these and other sources.\footnote{
+  See \cite{kondylis2018speed} for an example.}
 However your study data is structured,
 you need to know how to link data from all sources
 and analyze the relationships between the units that appear in them
@@ -57,7 +57,7 @@ You might think that you are able to keep all the relevant details in your head,
 but your whole research team is unlikely to have the same understanding,
 at all times, of all the datasets required.
 The only way to make sure that the full team shares the same understanding
-is to create a \textbf{data map}\index{data map}.\sidenote{
+is to create a \textbf{data map}\index{data map}.\footnote{
 	\url{https://dimewiki.worldbank.org/Data\_Map}}
 DIME's data map template has three components:
 one \textit{data linkage table},
@@ -68,22 +68,22 @@ Each component of the data map
 that you create for your project
 will contribute to understanding
 what the data is about and how to use it.
-First, you will create a \textbf{data linkage table}\sidenote{
+First, you will create a \textbf{data linkage table}\footnote{
 	\url{https://dimewiki.worldbank.org/Data\_Linkage\_Table}}
 listing all the raw datasets that will be used in the project,
 what data sources they are created from,
 and how they relate to each other.
-Second, for each \textbf{unit of observation}\sidenote{
+Second, for each \textbf{unit of observation}\footnote{
 	\url{https://dimewiki.worldbank.org/Unit\_of\_Observation}}
 in the data linkage table,
 as well for each unit of analysis you plan to use,
-you will maintain a \textbf{master dataset}\sidenote{
+you will maintain a \textbf{master dataset}\footnote{
 	\url{https://dimewiki.worldbank.org/Master\_Data\_Set}}
 listing all observations of that unit relevant to the project.
 These datasets will be the authoritative sources for all research data
 including unique identifiers, sample statuses, and treatment assignments.
 Finally, using these two resources
-you will continuously create \textbf{data flowcharts},\sidenote{
+you will continuously create \textbf{data flowcharts},\footnote{
 	\url{https://dimewiki.worldbank.org/Data\_Flow\_Chart}}
 describing how the raw datasets and master datasets
 are to be combined and manipulated to create analysis datasets.
@@ -113,7 +113,7 @@ and the raw datasets that will be created from them.
 If one source of data will result in two different raw datasets,
 then list each dataset on its own row.
 For each dataset, list the unit of observation
-and the name of the \textbf{project ID}\sidenote{
+and the name of the \textbf{project ID}\footnote{
 	\textbf{Project ID:} The main ID used in your project to identify
 	observations.
 	You should never have multiple project IDs for the same unit of observation.
@@ -138,8 +138,8 @@ be fully and uniquely identified by the project ID,
 or make a plan for how the new dataset will be linked to the project ID.
 It is very labor-intensive to work with a dataset that
 do not have an unambiguous way to link to the project ID,
-and it is a major source of error.\sidenote{
-  See \citet{fernandes2017evaluation} for an example.}
+and it is a major source of error.\footnote{
+  See \cite{fernandes2017evaluation} for an example.}
 
 The data linkage table should indicate whether
 datasets can be merged one-to-one (for example,
@@ -160,14 +160,14 @@ for each unit of observation that will be used in any research activity.
 Examples of such activities are data collection, data analysis,
 random sampling, and treatment assignment.\index{master dataset}
 The master dataset should be the authoritative source of
-all \textbf{research variables}\sidenote{
+all \textbf{research variables}\footnote{
 	\textbf{Research variables:} Research data that identifies observations
 	and maps research design information to those observations.
 	Research variables are time-invariant and
 	often, but not always, controlled by the research team.
 	Examples include
 	ID variables, sampling status, treatment status, and treatment uptake.}\index{research variables}
-but not include any \textbf{measurement variables}.\sidenote{
+but not include any \textbf{measurement variables}.\footnote{
 	\textbf{Measurement variables:} Data that
 	measures attributes or records responses of research subjects.
 	Measurement variables are not controlled by the research team
@@ -227,8 +227,8 @@ on string variables like proper names,
 the more information you have the fewer errors you are likely to make
 If you ever need to do a fuzzy match,
 you should always do that between the master dataset
-and the dataset without an unambiguous identifier.\sidenote{
-  See \citet{benhassine2018does} for an example.}
+and the dataset without an unambiguous identifier.\footnote{
+  See \cite{benhassine2018does} for an example.}
 You should not do anything with that dataset until
 you have successfully merged
 the project IDs from the master dataset.
@@ -309,12 +309,12 @@ and specific references for common impact evaluation designs.
 As DIME primarily works on impact evaluations,
 we focus our discussion here on research designs
 that compare a group that received
-some kind of \textbf{treatment}\index{treatment}\sidenote{
+some kind of \textbf{treatment}\index{treatment}\footnote{
 	\textbf{Treatment:} The general word for the evaluated intervention or event.
 	This includes things like being offered a training,
 	a cash transfer from a program,
 	or experiencing a natural disaster, among many others.}
-group against a \textbf{counterfactual}\index{counterfactual}.\sidenote{
+group against a \textbf{counterfactual}\index{counterfactual}.\footnote{
 	\textbf{Counterfactual:} A statistical description of
 	what would have happened
 	to specific individuals in an alternative scenario,
@@ -324,7 +324,7 @@ person, facility, or village
 (or whatever the unit of treatment is)
 had two possible states: their outcome if they did receive the treatment
 and their outcome if they did not receive that treatment.
-The average impact of the treatment,\sidenote{
+The average impact of the treatment,\footnote{
 	\textbf{Average treatment effect (ATE):}
 	The expected average change in outcome
 	that untreated units would have experienced
@@ -341,7 +341,7 @@ which is often referred to as achieving
 \textbf{balance} between two or more groups.
 DIME Analytics maintains a Stata command to
 standardize and automate the creation of well-formatted balance tables:
-\texttt{iebaltab}.\sidenote{
+\texttt{iebaltab}.\footnote{
 	\url{https://dimewiki.worldbank.org/iebaltab}}
 Each research design has a different method for
 identifying and balancing the counterfactual group.
@@ -359,7 +359,7 @@ if you created a data linkage table.
 %%%%% Experimental design
 
 In \textbf{experimental research designs},
-such as \textbf{randomized control trials (RCTs)},\sidenote{
+such as \textbf{randomized control trials (RCTs)},\footnote{
 	\url{https://dimewiki.worldbank.org/Randomized\_Control\_Trials}}
   \index{randomized control trials}\index{experimental research designs}
 the research team determines which members
@@ -372,7 +372,7 @@ The intuition is that if everyone in the eligible population
 is assigned at random to either the treatment or control group,
 then the two groups will, on average, be statistically indistinguishable.
 The treatment will therefore not be correlated with anything
-but the impact of that treatment.\sidenote{\citet{duflo2007using}}
+but the impact of that treatment.\footnote{\cite{duflo2007using}}
 The randomized assignment should be done
 using data from the master dataset,
 and the result should be saved back to the master dataset,
@@ -380,7 +380,7 @@ before being merged to other datasets.
 
 %%%%% Quasi-experimental design
 
-\textbf{Quasi-experimental research designs},\sidenote{
+\textbf{Quasi-experimental research designs},\footnote{
 	\url{https://dimewiki.worldbank.org/Quasi-Experimental\_Methods}}
 \index{quasi-experimental research designs}
 by contrast, are based on events not controlled by the research team.
@@ -404,19 +404,19 @@ how this data can be linked to the rest of the data in your project.
 No matter the design type, you should be very clear about
 which data points you observe or collect are research variables.
 For example,
-\textbf{regression discontinuity (RD)}\sidenote{
+\textbf{regression discontinuity (RD)}\footnote{
 	\url{https://dimewiki.worldbank.org/Regression\_Discontinuity}}
   \index{regression discontinuity}
 designs exploit sharp breaks or limits
-in policy designs.\sidenote{
-  See \citet{alix2019can} for an example.}
+in policy designs.\footnote{
+  See \cite{alix2019can} for an example.}
 The cutoff determinant, or running variable,
 should be saved in your master dataset.
-In \textbf{instrumental variables (IV)}\sidenote{
+In \textbf{instrumental variables (IV)}\footnote{
 	\url{https://dimewiki.worldbank.org/Instrumental\_Variables}}
   \index{instrumental variables}
-designs, the \textbf{instruments} influence the \textit{probability} of treatment.\sidenote{
-  See \citet{calderon2017opportunity} for an example.}
+designs, the \textbf{instruments} influence the \textit{probability} of treatment.\footnote{
+  See \cite{calderon2017opportunity} for an example.}
 These research variables should be collected
 and stored in the master dataset.
 Both the running variable in RD designs
@@ -428,17 +428,17 @@ ex-ante clearly indicate what point of time they will be recorded,
 and this should be clearly documented in your master dataset.
 
 In \textbf{matching} designs, observations are often grouped
-by a strata, grouping, index, or propensity score.\sidenote{
+by a strata, grouping, index, or propensity score.\footnote{
 	\url{https://dimewiki.worldbank.org/Matching}}
 Like all research variables, the matching results
 should be stored in the master dataset.
 This is best done by assigning a matching ID
 to each matched pair or group,
 and create a variable in the master dataset
-with the matching ID each unit belongs to.\sidenote{
-  See \citet{prennushi2014women} for an example.}
-In all these designs, fidelity to the design is important to record as well.\sidenote{
-  See \citet{pradhan2013evaluating} for an example.}
+with the matching ID each unit belongs to.\footnote{
+  See \cite{prennushi2014women} for an example.}
+In all these designs, fidelity to the design is important to record as well.\footnote{
+  See \cite{pradhan2013evaluating} for an example.}
 A program intended for students that scored under 50\% on a test
 might have some cases where the program is offered to someone that scored 51\% at the test,
 or someone that scored 49\% at the might decline to participate in the program.
@@ -461,8 +461,8 @@ In repeated cross-sections,
 each successive round of data collection uses a new random sample
 of observations from the treatment and control groups,
 but in a panel data study
-the same observations are tracked and included each round.\sidenote{
-  See \citet{kondylis2016female} for an example.}
+the same observations are tracked and included each round.\footnote{
+  See \cite{kondylis2016female} for an example.}
 If each round of data collection is a separate activity,
 then they should be treated as separate sources of data
 and get their own row in the data linkage table.
@@ -476,8 +476,8 @@ when panel data is collected in separate activities.
 You must keep track of the \textit{attrition rate} in panel data,
 which is the share of observations not observed in follow-up data.
 It is common that the observations not possible to track
-can be correlated with the outcome you study.\sidenote{
-  See \citet{bertrand2017contemporaneous} for an example.}
+can be correlated with the outcome you study.\footnote{
+  See \cite{bertrand2017contemporaneous} for an example.}
 For example, poorer households may live in more informal dwellings,
 patients with worse health conditions might not survive to follow-up,
 and so on.
@@ -496,7 +496,7 @@ compared to the rest of the sample.
 \subsection{Monitoring data}
 
 For any study with an ex-ante design,
-\textbf{monitoring data}\index{monitoring data}\sidenote{
+\textbf{monitoring data}\index{monitoring data}\footnote{
 		\url{https://dimewiki.worldbank.org/Monitoring\_Data}}
 is very important for understanding if the
 research design corresponds to reality.
@@ -524,8 +524,8 @@ when linking it with the rest of the data in your project.
 Often monitoring activities are done by
 sending a team to simply record the name of all people attending a training,
 or by a partner organization sharing their administrative data,
-which is rarely maintained in the same format or structure as your research data.\sidenote{
-  See \citet{goldstein2015formalizing} for an example.}
+which is rarely maintained in the same format or structure as your research data.\footnote{
+  See \cite{goldstein2015formalizing} for an example.}
 In both those cases it can be difficult to make sure that
 the project ID or any other unambiguous identifiers in our master datasets
 is used to record who is who.
@@ -545,7 +545,7 @@ that generate new research variables.
 Random sampling and random treatment assignment directly determine
 the set of individuals who are going to be observed
 and what their status will be for the purpose of effect estimation.
-\textbf{Randomization}\sidenote{
+\textbf{Randomization}\footnote{
 	\textbf{Randomization} is often used interchangeably
 	to mean random treatment assignment.
 	In this book however, \textit{randomization} will only
@@ -583,7 +583,7 @@ and have implications for feasibility, planning, and budgeting.
 \textbf{Sampling} is the process of randomly selecting observations
 from a list of individuals to create a representative or statistically similar sub-sample.\index{sampling}
 This process can be used, for example, to select a subset from all eligible units
-to be included in data collection when the cost of collecting data on everyone is prohibitive.\sidenote{
+to be included in data collection when the cost of collecting data on everyone is prohibitive.\footnote{
 	\url{https://dimewiki.worldbank.org/Sample\_Size\_and\_Power\_Calculations}}
 But it can also be used to select a sub-sample of your observations to test a computationally heavy process
 before running it on the full data.
@@ -639,8 +639,8 @@ Sampling typically has only two possible outcomes: observed and unobserved.
 Similarly, a simple randomized assignment has two outcomes: treatment and control,
 and the logic in the code would be identical to the sampling code example.
 However, randomized assignment often involves multiple treatment arms
-which each represent different varieties of treatments to be delivered;\sidenote{
-  See \citet{de2013helping} for an example.}
+which each represent different varieties of treatments to be delivered;\footnote{
+  See \cite{de2013helping} for an example.}
 in some cases, multiple treatment arms are intended to overlap in the same sample.
 Complexity can therefore grow very quickly in randomized assignment
 and it is doubly important to fully understand the conceptual process
@@ -657,18 +657,18 @@ a randomized assignment with multiple treatment arms.
 
 % what it means for randomization to be reproducible
 For statistical programming to be reproducible,
-you must be able to re-obtain its exact outputs in the future.\sidenote{\citet{orozco2018make}}
+you must be able to re-obtain its exact outputs in the future.\footnote{\cite{orozco2018make}}
 We will focus on what you need to do to produce
 truly random results for your project,
 to ensure you can get those results again.
 This takes a combination of strict rules, solid understanding, and careful programming.
 This section introduces strict rules:
 these are non-negotiable (but thankfully simple).
-Stata, like most statistical software, uses a \textbf{pseudo-random number generator}\sidenote{
+Stata, like most statistical software, uses a \textbf{pseudo-random number generator}\footnote{
 	\textbf{Pseudo-random number generator:} An algorithm that creates a long, fixed sequence of numbers
   which exhibits no statistical relationships between the position or value of any set of those numbers.}
 which, in ordinary research use,
-produces sequences of number that are as good as random.\sidenote{
+produces sequences of number that are as good as random.\footnote{
 	\url{https://dimewiki.worldbank.org/Randomization\_in\_Stata}}
 However, for \textit{reproducible} randomization, we need two additional properties:
 we need to be able to fix the sequence of numbers generated and
@@ -682,12 +682,12 @@ but the same principles translate to all other programming languages.
 \textbf{Versioning} means using the same version of the software each time you run the random process.
 If anything is different, the underlying list of random numbers may have changed,
 and it may be impossible to recover the original result.
-In Stata, the \texttt{version} command ensures that the list of random numbers is fixed.\sidenote{
+In Stata, the \texttt{version} command ensures that the list of random numbers is fixed.\footnote{
 	At the time of writing, we recommend using \texttt{version 13.1} for backward compatibility;
 	the algorithm used to create this list of random numbers was changed after Stata 14 but the improvements do not matter in practice.}
-The \texttt{ieboilstart} command in \texttt{ietoolkit} provides functionality to support this requirement.\sidenote{
+The \texttt{ieboilstart} command in \texttt{ietoolkit} provides functionality to support this requirement.\footnote{
 	\url{https://dimewiki.worldbank.org/ieboilstart}}
-We recommend you use \texttt{ieboilstart} at the beginning of your master do-file.\sidenote{
+We recommend you use \texttt{ieboilstart} at the beginning of your master do-file.\footnote{
 	\url{https://dimewiki.worldbank.org/Master\_Do-files}}
 However, testing your do-files without running them
 via the master do-file may produce different results,
@@ -715,7 +715,7 @@ those smaller datasets after your randomization.
 \textbf{Seeding} means manually setting the start point in the list of pseudo-random numbers.
 A seed is just a single number that specifies one of the possible start points.
 It should be at least six digits long and you should use exactly
-one unique, different, and randomly created seed per randomization process.\sidenote{You
+one unique, different, and randomly created seed per randomization process.\footnote{You
 	can draw a uniformly distributed six-digit seed randomly by visiting \url{https://bit.ly/stata-random}.
 	(This link is a just shortcut to request such a random number on \url{https://www.random.org}.)
 	There are many more seeds possible but this is a large enough set for most purposes.}
@@ -788,21 +788,21 @@ This way, you reduce the risk of errors in field randomization.
 % the cases discussed so far are the most simple, but not the most common
 For a variety of reasons, random sampling and random treatment assignment
 are rarely as straightforward as a uniform-probability draw.
-The most common variants are \textbf{clustering} and \textbf{stratification}.\sidenote{\citet{athey2017econometrics}}
+The most common variants are \textbf{clustering} and \textbf{stratification}.\footnote{\cite{athey2017econometrics}}
 \textbf{Clustering} occurs when your unit of analysis is different
-than the unit of sampling or treatment assignment.\sidenote{
+than the unit of sampling or treatment assignment.\footnote{
 	\url{https://dimewiki.worldbank.org/Unit\_of\_Observation}}
 For example, a policy may be implemented at the village level,
 or you may only be able to send enumerators to a limited number of villages,
-or the outcomes of interest for the study are measured at the household level.\sidenote{
+or the outcomes of interest for the study are measured at the household level.\footnote{
 	\url{https://dimewiki.worldbank.org/Multi-stage\_(Cluster)\_Sampling}}
 \index{clustered randomization}
-The groups in which units are assigned to treatment are called clusters.\sidenote{
-  See \citet{keating2011evaluating} for an example.}
+The groups in which units are assigned to treatment are called clusters.\footnote{
+  See \cite{keating2011evaluating} for an example.}
 
 % what is stratification
 \textbf{Stratification} breaks the full set of observations into subgroups
-before performing randomized assignment within each subgroup.\sidenote{
+before performing randomized assignment within each subgroup.\footnote{
 	\url{https://dimewiki.worldbank.org/Stratified\_Random\_Sample}}
 \index{stratification}
 The subgroups are called \textbf{strata}.
@@ -830,7 +830,7 @@ the clustering variable should be clearly identified in the master dataset
 for the unit of analysis
 since it will need to be used in subsequent statistical analysis.
 Namely, standard errors for these types of designs must be clustered
-at the level at which the randomization was clustered.\sidenote{
+at the level at which the randomization was clustered.\footnote{
 	\url{https://blogs.worldbank.org/impactevaluations/when-should-you-cluster-standard-errors-new-wisdom-econometrics-oracle}}
 This accounts for the design covariance within the cluster --
 the information that if one individual was observed or treated there,
@@ -840,9 +840,9 @@ the other members of the clustering group were as well.
 By contrast, implementing stratified designs in statistical software is prone to error.
 Even for a simple multi-armed design,
 the basic method of randomly ordering the observations
-will often create very skewed assignments.\sidenote{
+will often create very skewed assignments.\footnote{
 	\url{https://blogs.worldbank.org/impactevaluations/tools-of-the-trade-doing-stratified-randomization-with-uneven-numbers-in-some-strata}}
-The user-written \texttt{randtreat} command properly implements stratification.\sidenote{\citet{carril2017dealing}}
+The user-written \texttt{randtreat} command properly implements stratification.\footnote{\cite{carril2017dealing}}
 The options and outputs (including messages) from the command should be carefully reviewed
 so that you understand exactly what has been implemented.
 Notably, it is extremely hard to target precise numbers of observations
@@ -871,7 +871,7 @@ Since we know that the true correlation
 is zero, we think of the observed correlation as an \textbf{error}.
 In sampling, we call this the \textbf{sampling error},
 and it is defined as the difference between a true population parameter
-and the observed mean due to chance selection of units.\sidenote{
+and the observed mean due to chance selection of units.\footnote{
 	\url{https://dimewiki.worldbank.org/Sampling}}
 In randomized assignment, we call this the \textbf{randomization noise},
 and define it as the difference between a true treatment effect
@@ -881,7 +881,7 @@ you can find some possible subsets that have higher-than-average values of some 
 similarly, you can find some that have lower-than-average values.
 Your random sample or treatment assignment will fall in one of these categories,
 and we need to assess the likelihood and magnitude of this occurrence.
-\textit{Power calculation} and \textit{randomization inference} are the two key tools to doing so.\sidenote{
+\textit{Power calculation} and \textit{randomization inference} are the two key tools to doing so.\footnote{
 	\url{https://dimewiki.worldbank.org/Sample_Size_and_Power_Calculations}}
 
 % why to do power calculations
@@ -895,7 +895,7 @@ The purpose of power calculations is to identify where the strengths and weaknes
 of your design are located, so you know the relative tradeoffs you will face
 by changing your randomization scheme for the final design.
 
-The \textbf{minimum detectable effect (MDE)}\sidenote{
+The \textbf{minimum detectable effect (MDE)}\footnote{
 	\url{https://dimewiki.worldbank.org/Minimum\_Detectable\_Effect}}
 is the smallest true effect that a given research design can reliably detect.
 This is useful as a check on whether a study is worthwhile.
@@ -911,7 +911,7 @@ which can tell you what resources you would need
 to implement a useful study.
 
 % what is randomization inference
-\textbf{Randomization inference}\sidenote{
+\textbf{Randomization inference}\footnote{
 	\url{https://dimewiki.worldbank.org/Randomization\_Inference}}
 is used to analyze the likelihood
 \index{randomization inference}

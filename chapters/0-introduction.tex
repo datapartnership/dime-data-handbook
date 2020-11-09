@@ -1,4 +1,4 @@
-\begin{fullwidth}
+
 Welcome to \textit{Development Research in Practice: The DIME Analytics Data Handbook}.
 This book is intended to teach all users of development data
 how to handle data effectively, efficiently, and ethically.
@@ -35,21 +35,21 @@ how to structure research projects to ensure data quality,
 and how to institute transparent and reproducible workflows.
 
 
-\end{fullwidth}
+
 
 %------------------------------------------------
 
 \section{The team behind this book}
-DIME is the Development Impact Evaluation department of the World Bank.\sidenote{
+DIME is the Development Impact Evaluation department of the World Bank.\footnote{
   \url{https://www.worldbank.org/en/research/dime}}
 Its mission is to generate high-quality and operationally relevant data and research
-to transform development policy, help reduce extreme poverty, and secure shared prosperity.\sidenote{\citet{legovini2015impact}}
+to transform development policy, help reduce extreme poverty, and secure shared prosperity.\footnote{\cite{legovini2015impact}}
 DIME develops customized data and evidence ecosystems to produce actionable information
 and recommend specific policy pathways to maximize impact.
 The department conduct research in 60 countries with 200 agencies, leveraging a
 US\$180 million research budget to shape the design and implementation of
 US\$18 billion in development finance.
-DIME also provides advisory services to 30 multilateral and bilateral development agencies.\sidenote{\citet{legovini2019}}
+DIME also provides advisory services to 30 multilateral and bilateral development agencies.\footnote{\cite{legovini2019}}
 DIME research is organized into four primary topic pillars:
 Economic Transformation and Growth;
 Gender, Economic Opportunity, and Fragility;
@@ -65,7 +65,7 @@ and to make DIME tools available to the larger community of development research
 As part of its broader mission, DIME invests in public goods
 to improve the quality and reproducibility of development research around the world.
 One key early innovation at DIME was the creation of DIME Analytics,
-the team responsible for writing and maintaining this book.\sidenote{
+the team responsible for writing and maintaining this book.\footnote{
   \url{https://www.worldbank.org/en/research/dime/data-and-analytics}}
 DIME Analytics is a centralized unit that develops and ensures adoption
 of high quality research practices across the department's portfolio.
@@ -102,13 +102,13 @@ to where 64\% of papers passed in 2019 without revision required.
 
 %------------------------------------------------
 
-\begin{fullwidth}
+
 	\begin{figure}
 		\centering
 		\includegraphics[width=1.5\linewidth]{diagrams/Introduction}
 		\label{fig:intro}
 	\end{figure}
-\end{fullwidth}
+
 
 \section{How to read this book}
 This book aims to be a highly practical resource so the reader can
@@ -199,7 +199,7 @@ The references and links contained in each chapter
 will lead you to detailed descriptions of individual
 ideas, tools, and processes to refer to when you need to implement the tasks yourself.
 Specific implementation details and links to further practical resources
-will often be found on the linked pages in the \textbf{DIME Wiki}.\sidenote{
+will often be found on the linked pages in the \textbf{DIME Wiki}.\footnote{
 The DIME Wiki is a free online collection of impact evaluation resources and best practices. \url{https://dimewiki.worldbank.org}}.
 
 %------------------------------------------------
@@ -212,34 +212,34 @@ but typically reserved very little space for detailed descriptions
 of how data was actually collected and handled.
 It is almost impossible to assess the quality of the data in such a paper,
 and whether the results could be reproduced.
-In the past decade, this has started to change,\sidenote{\citet{swanson2020research}}
+In the past decade, this has started to change,\footnote{\cite{swanson2020research}}
 in part due to increasing requirements by publishers and funders to release code and data.
 Data handling and documentation is a key skill for researchers and research staff.
 Standard processes and documentation practices
 are important throughout the research process to accurately convey
-and implement the intended research design.\sidenote{\citet{vilhuber_lars_2020_3911311}}
+and implement the intended research design.\footnote{\cite{vilhuber_lars_2020_3911311}}
 When data work is done in an ad-hoc manner,
 it is very difficult for others to understand what is being done --
 a reader has to simply trust that the researchers did these things right.
 Most importantly, if any part of the data pipeline breaks down,
-research results become unreliable\sidenote{ \citet{mccullough2008economics}}
+research results become unreliable\footnote{ \cite{mccullough2008economics}}
 and cannot be faithfully interpreted
-as being an accurate picture of the intended research design.\sidenote{
+as being an accurate picture of the intended research design.\footnote{
   \url{https://blogs.worldbank.org/impactevaluations/more-replication-economics}}
-Because we almost never have ``laboratory'' settings\sidenote{
-  See \citet{baldwin2015elections} for an example.}
+Because we almost never have ``laboratory'' settings\footnote{
+  See \cite{baldwin2015elections} for an example.}
 in this type of research,
 such a failure has a very high cost:
 we will have wasted the investments that were made into knowledge generation,
 and the research opportunity itself,
-where we intended to conduct the study.\sidenote{\citet{camerer2016evaluating}}
+where we intended to conduct the study.\footnote{\cite{camerer2016evaluating}}
 
 Accurate and reproducible data management and analysis
 is essential to the success and credibility of modern research.
 Standardizing and documenting data handling processes is essential
 to be able to evaluate and understand
 the data work alongside any final research outputs.
-An important component of this is \textbf{process standardization}.\sidenote{
+An important component of this is \textbf{process standardization}.\footnote{
 	\textbf{Process standardization:} Agreement within a research team
 	about how all tasks of a specific type will be approached.}\index{process standardization}
 Process standardization means that there is
@@ -300,11 +300,11 @@ and think of code and data as research outputs, just as manuscripts and briefs a
 This approach arises because we see the code as the ``recipe'' for the analysis.
 The code tells others exactly what was done,
 how they can do it again in the future,
-and provides a roadmap and knowledge base for further original work.\sidenote{\citet{hamermesh2007replication}}
+and provides a roadmap and knowledge base for further original work.\footnote{\cite{hamermesh2007replication}}
 Performing every task through written code
-creates a record of every task you performed.\sidenote{\citet{ozier2019replication}}
+creates a record of every task you performed.\footnote{\cite{ozier2019replication}}
 It also prevents direct interaction
-with the data files that could lead to non-reproducible processes.\sidenote{\citet{chang2015economics}}
+with the data files that could lead to non-reproducible processes.\footnote{\cite{chang2015economics}}
 Finally, DIME Analytics has invested a lot of time in developing code as a learning tool:
 the examples we have written and the commands we provide
 are designed to provide a framework for common practice
@@ -318,9 +318,9 @@ only by using it in real-world work.
 To support your process of learning reproducible tools and workflows,
 we reference free and open-source tools wherever possible,
 and point to more detailed instructions when relevant.
-\textbf{Stata},\sidenote{\citet{statacorp2019stata}}
+\textbf{Stata},\footnote{\cite{statacorp2019stata}}
 as a proprietary software, is the notable exception here
-due to its persistent popularity in development economics and econometrics.\sidenote{
+due to its persistent popularity in development economics and econometrics.\footnote{
 	\url{https://dimewiki.worldbank.org/Software_Tools}}
 This book also includes, in an appendix,
 the \textbf{DIME Analytics Coding Guide}
@@ -336,7 +336,7 @@ build on each other's best practices.
 Some of the programming languages used at DIME
 already have well-established and commonly used style guides,
 such as the Tidyverse style guide for R
-and PEP-8 for Python.\sidenote{See DIME Analytics Coding Standards:
+and PEP-8 for Python.\footnote{See DIME Analytics Coding Standards:
 	\url{https://github.com/worldbank/dime-standards}}.
 Stata has relatively few resources of this type available,
 which is why we have created and included one here that

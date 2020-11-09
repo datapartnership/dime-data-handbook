@@ -1,6 +1,6 @@
 %------------------------------------------------
 
-\begin{fullwidth}
+
 
 % Intro ----------------------------------------
 
@@ -36,7 +36,7 @@ for both the full research team members and a public audience.
 The final section discusses ways to automate common outputs
 so that your work is fully reproducible.
 
-\end{fullwidth}
+
 
 %------------------------------------------------
 
@@ -44,11 +44,11 @@ so that your work is fully reproducible.
 
 % What is construction
 For this chapter, we assume you are starting from
-one or multiple well-documented tidy\sidenote{\citet{hadley2017R}} datasets.
+one or multiple well-documented tidy\footnote{\cite{hadley2017R}} datasets.
 We also assume that these datasets
 have gone through thorough quality checks
 and incorporate any corrections needed.
-The next step is to \textbf{construct}\sidenote{
+The next step is to \textbf{construct}\footnote{
 	\textbf{Data construction}:
 	The process of transforming cleaned data into analysis data by
 	creating the derived indicators that will be analyzed.}
@@ -57,8 +57,8 @@ that is, to transform the cleaned data into analysis-ready data.
 It's possible the acquired data is ready for analysis,
 but in most cases it needs to be prepared by integrating different datasets
 and creating derived variables
-(dummies, indices, and interactions, to name a few\sidenote{
-  See \citet{adjognon2019reducing} for an example.}).
+(dummies, indices, and interactions, to name a few\footnote{
+  See \cite{adjognon2019reducing} for an example.}).
 The derived indicators you will construct should be
 planned during research design\index{research design};
 the pre-analysis plan should serve as your guide
@@ -66,7 +66,7 @@ at this stage.\index{pre-analysis plan}
 During construction, data will typically be
 reshaped, merged, and aggregated to change the level of the data points
 from the \textbf{unit of \textit{observation}} in the raw data
-to the \textbf{unit of \textit{analysis}}.\sidenote{\url{
+to the \textbf{unit of \textit{analysis}}.\footnote{\url{
 		https://dimewiki.worldbank.org/Unit\_of\_Observation}}\index{unit of observation}\index{unit of analysis}
 
 % A project may require multiple purpose-built data sets
@@ -138,14 +138,14 @@ avoid this and ensures consistency across different outputs.
 % When merging is necessary and how to start thinking about it
 To create the analysis dataset,
 it is typically necessary to combine information
-from different data sources.\sidenote{\url{
+from different data sources.\footnote{\url{
 		https://dimewiki.worldbank.org/Data\_Integration}}
 As discussed in Chapter 3,
 this process should be documented
-using \textbf{data flowcharts},\sidenote{
+using \textbf{data flowcharts},\footnote{
 	\url{https://dimewiki.worldbank.org/Data\_Flow\_Charts}}
 and different data sources should only be combined
-in accordance with the data linkage table.\sidenote{
+in accordance with the data linkage table.\footnote{
 	\url{https://dimewiki.worldbank.org/wiki/Data\_Linkage\_Table}}
 For example, you may merge administrative data with survey data
 in order to include demographic information in your analysis,
@@ -237,7 +237,7 @@ Adding notes to each variable will make your dataset more user-friendly.
 % Dealing with outliers and missing values
 At this point, you will also need to decide
 how to handle any outliers or unusual values identified during data cleaning.
-How to treat outliers is a research question.\sidenote{
+How to treat outliers is a research question.\footnote{
 	\url{https://dimewiki.worldbank.org/Variable_Construction\#Dealing_with_outliers}}\index{outliers}
 There are multiple possible approaches,
 and the best choice for a particular case
@@ -262,13 +262,13 @@ Then the first thing you should do is create a cleaned panel dataset,
 ignoring the previous constructed version of the baseline data.
 Our team created \texttt{iefieldkit}'s \texttt{iecodebook append} subcommand
 % to-do % -----------------------------------------------------------------
-% \sidenote{\url{STATA JORUNAL ARTICLE}}
+% \footnote{\url{STATA JORUNAL ARTICLE}}
 % -------------------------------------------------------------------------
 to help you reconcile and append data from cleaned survey rounds
 or similar data collected from different contexts.\index{iefieldkit}\index{iecodebook}
 This is done by completing an Excel sheet to indicate what changes in
-names, value assignments, and value labels should be made so the data is consistent across rounds or settings.\sidenote{
-  See \citet{daniels2017use} for an example.}
+names, value assignments, and value labels should be made so the data is consistent across rounds or settings.\footnote{
+  See \cite{daniels2017use} for an example.}
 By doing so, you are also creating helpful documentation about your data work.
 % to-do % --------------------------------------------------------
 % See XXX for an example of a Stata do-file uses iecodebook append
@@ -306,8 +306,8 @@ This will be implemented in your code, but you should still
 add comments explaining in human language what you are doing and why.
 This is a crucial step both to prevent mistakes and to guarantee transparency.
 To make sure that these comments can be more easily navigated,
-it is wise to start writing a variable dictionary as soon as you begin making changes to the data.\sidenote{
-	See \citet{jones2019factor} for an example.}
+it is wise to start writing a variable dictionary as soon as you begin making changes to the data.\footnote{
+	See \cite{jones2019factor} for an example.}
 Carefully record how specific variables have been combined, recoded, and scaled,
 and refer to those records in the code.
 
@@ -331,10 +331,10 @@ is implementing exactly what is described in the documentation.
 After data is cleaned and indicators are constructed, you are ready to start analyzing the data.
 \index{data analysis}
 There are many existing resources for data analysis and statistical methods, such as
-\textit{R for Data Science};\sidenote{\citet{hadley2017R}}
-\textit{A Practical Introduction to Stata};\sidenote{\citet{RePEc:gdm:wpaper:9412}}
-\textit{Mostly Harmless Econometrics};\sidenote{\citet{angrist2008mostly}}
-and \textit{Causal Inference: The Mixtape}.\sidenote{\citet{cunningham2018causal}}
+\textit{R for Data Science};\footnote{\cite{hadley2017R}}
+\textit{A Practical Introduction to Stata};\footnote{\cite{RePEc:gdm:wpaper:9412}}
+\textit{Mostly Harmless Econometrics};\footnote{\cite{angrist2008mostly}}
+and \textit{Causal Inference: The Mixtape}.\footnote{\cite{cunningham2018causal}}
 We focus on how to structure data analysis code and files, rather than how to conduct specific analyses.
 
 \subsection{Organizing analysis code}
@@ -409,7 +409,7 @@ as you will constantly re-order them during data analysis.
 
 % Useful resources for data visualization
 \textbf{Data visualization} is increasingly popular,
-and is becoming a field in its own right.\sidenote{\citet{healy2018data,wilke2019fundamentals}}
+and is becoming a field in its own right.\footnote{\cite{healy2018data,wilke2019fundamentals}}
 We attribute some of the difficulty of creating good data visualization
 to the difficulty of writing code to create them.
 Making a visually compelling graph would already be hard enough if
@@ -426,8 +426,8 @@ discussed earlier in this chapter.
 % Stata Visual Library and ietoolkit
 Based on DIME's accumulated experience creating visualizations for impact evaluations,
 our team has developed a few resources to facilitate this workflow.
-First of all, we maintain easily-searchable data visualization libraries for both Stata\sidenote{
-	\url{https://worldbank.github.io/Stata-IE-Visual-Library}}, and R\sidenote{
+First of all, we maintain easily-searchable data visualization libraries for both Stata\footnote{
+	\url{https://worldbank.github.io/Stata-IE-Visual-Library}}, and R\footnote{
 	\url{https://worldbank.github.io/r-econ-visual-library/}},.
 These libraries feature curated data visualization examples, along with source code and example datasets,
 so you get a good sense of what your data should look like
@@ -438,7 +438,7 @@ common impact evaluation graphs:
 and \texttt{iekdensity} displays the distribution of an outcome variable
 across groups and adds the treatment effect as a note.
 The DIME Wiki provides a list of other recommended resources and tools
-for creating good data visualizations.\sidenote{\url{
+for creating good data visualizations.\footnote{\url{
 		https://dimewiki.worldbank.org/Data\_visualization}}\index{data visualization}
 
 
@@ -454,7 +454,7 @@ to answer research questions and present answers.
 Though it is best to be transparent about different
 specifications tried and tests performed,
 only a few will ultimately be considered ``main results''.
-These will be \textbf{exported}\sidenote{
+These will be \textbf{exported}\footnote{
   \textbf{Exporting results:} The creation of publication-ready representations of results.}\index{exporting results}
 from the statistical software.
 That is, they will be saved as tables and figures in format that is easier to interact with.
@@ -554,7 +554,7 @@ You may think that it's not worth coding a small formatting adjustment,
 but you will inevitably need to make changes to the output,
 and automating them will save you time by the end of the process.
 (However, don't spend much time formatting tables and graphs until
-you have come to a decision about which will be used for your final product.\sidenote{
+you have come to a decision about which will be used for your final product.\footnote{
 	For a more detailed discussion on this, including different ways to export tables from Stata,
 	see \url{https://blogs.worldbank.org/impactevaluations/nice-and-fast-tables-stata}})
 Polishing final outputs can be a time-consuming process,
@@ -572,11 +572,11 @@ and so do the chances of having the wrong version of a result in a paper or repo
 
 % Output formats
 There are numerous commands to export outputs from both R and Stata.
-Some examples are \texttt{estout},\sidenote{\citet{estout05}, \citet{estout07}}
-\texttt{outreg2},\sidenote{\citet{wada2014outreg2}}
-and \texttt{outwrite}\sidenote{\citet{daniels2019outwrite}} in Stata,
-and \texttt{stargazer}\sidenote{\citet{hlavac2015stargazer}}
-and \texttt{ggplot2}'s \texttt{ggsave}\sidenote{\citet{ggplot2}} in R.
+Some examples are \texttt{estout},\footnote{\cite{estout05}, \cite{estout07}}
+\texttt{outreg2},\footnote{\cite{wada2014outreg2}}
+and \texttt{outwrite}\footnote{\cite{daniels2019outwrite}} in Stata,
+and \texttt{stargazer}\footnote{\cite{hlavac2015stargazer}}
+and \texttt{ggplot2}'s \texttt{ggsave}\footnote{\cite{ggplot2}} in R.
 They allow for a wide variety of output formats. We recommend using formats that are accessible and, whenever possible, lightweight.
 Accessible means that it's easy for other people to open them.
 In Stata, that would mean always using \texttt{graph export} to save images as
@@ -595,9 +595,9 @@ Excel \texttt{.xlsx} and \texttt{.csv} are also commonly used,
 but often require the extra step of copying the tables into the final output.
 The \texttt{ietoolkit} package includes two commands to export formatted tables,
 automating the creation of common outputs and saving time for research.\index{ietoolkit}
-\texttt{iebaltab}\sidenote{\url{https://dimewiki.worldbank.org/iebaltab}}
+\texttt{iebaltab}\footnote{\url{https://dimewiki.worldbank.org/iebaltab}}
 creates and exports balance tables to Excel or {\LaTeX}.\index{LaTeX}
-\texttt{ieddtab}\sidenote{\url{https://dimewiki.worldbank.org/ieddtab}}
+\texttt{ieddtab}\footnote{\url{https://dimewiki.worldbank.org/ieddtab}}
 does the same for difference-in-differences regressions.
 
 % Last touches: formatting tables and including meta data
@@ -611,13 +611,13 @@ This means it should be easy to read and understand them with only the informati
 Make sure labels and notes cover all relevant information
 included in your code and comments that are not otherwise visible in the output.
 Examples of information that should be included in labels and notes include sample,
-unit of observation, unit of measurement, and variable definition.\sidenote{
+unit of observation, unit of measurement, and variable definition.\footnote{
 	\url{https://dimewiki.worldbank.org/Checklist:\_Submit\_Table}}
 
 \section{Preparing dynamic documents}
 
 % Intro: what it is and why to use it
-\textbf{Dynamic documents}\sidenote{
+\textbf{Dynamic documents}\footnote{
   \textbf{Dynamic documents:} File types that include direct references
   to exported materials and update them in the output automatically.}\index{dynamic documents}
 are a broad class of tools that enable a streamlined, reproducible workflow.
@@ -642,26 +642,26 @@ so you can skip the copying and pasting altogether.
 If all team members working on a dynamic document are comfortable using the same statistical software,
 built-in dynamic document engines are a good option for exploratory analysis.
 With these tools,
-you can write both text (often in Markdown\sidenote{\url{https://www.markdownguide.org/}}) and code in the script,
+you can write both text (often in Markdown\footnote{\url{https://www.markdownguide.org/}}) and code in the script,
 and the result will usually be a PDF or HTML file including code, text, and outputs.
 In our experience, many researchers find the entry cost to learning how to use these tools to be high.
 These types of dynamic document tools are typically best used by the team members working most closely with code,
 and can be great for creating exploratory analysis reports as you work on them,
 or paper appendices including large chunks of code and dynamically created graphs and tables.
-RMarkdown\sidenote{\url{https://rmarkdown.rstudio.com}} is the most widely adopted solution in R.
-Stata offers a built-in package for dynamic documents, \texttt{dyndoc},\sidenote{\url{
+RMarkdown\footnote{\url{https://rmarkdown.rstudio.com}} is the most widely adopted solution in R.
+Stata offers a built-in package for dynamic documents, \texttt{dyndoc},\footnote{\url{
 		https://www.stata.com/manuals/rptdyndoc.pdf}}
-and user-written commands such as \texttt{markstat},\sidenote{\citet{pr0067}}
-\texttt{markdoc},\sidenote{\citet{pr0064}},
-\texttt{webdoc},\sidenote{\citet{pr0065}} and
-\texttt{texdoc}.\sidenote{\citet{pr0062}}
+and user-written commands such as \texttt{markstat},\footnote{\cite{pr0067}}
+\texttt{markdoc},\footnote{\cite{pr0064}},
+\texttt{webdoc},\footnote{\cite{pr0065}} and
+\texttt{texdoc}.\footnote{\cite{pr0062}}
 The advantage of these tools in comparison with LaTeX is that
 they create full documents from within your scripts,
 so running the code and compiling the document is reduced to a single step.
 
 % Non-code options
 Documents called ``notebooks''
-(such as Jupyter Notebook\sidenote{\url{https://jupyter.org}})
+(such as Jupyter Notebook\footnote{\url{https://jupyter.org}})
 work similarly,
 as they also use the underlying code that create the document.
 These tools are usually appropriate for short or informal documents
@@ -688,7 +688,7 @@ discourage take up among team members who don't work with GitHub more extensivel
 Though formatted text software such as Word and PowerPoint are still prevalent,
 researchers are increasingly choosing to prepare final outputs
 like documents and presentations using {\LaTeX}.\index{LaTeX}
-{\LaTeX} is a document preparation and typesetting system with a unique code syntax.\sidenote{See \url{https://github.com/worldbank/DIME-LaTeX-Templates}.}
+{\LaTeX} is a document preparation and typesetting system with a unique code syntax.\footnote{See \url{https://github.com/worldbank/DIME-LaTeX-Templates}.}
 While {\LaTeX} has a significant learning curve,
 its enormous flexibility in terms of operation, collaboration, output formatting, and styling
 make it our preferred choice for most large technical outputs.
@@ -731,12 +731,12 @@ as well as describing methods for making your data,
 code, documentation, and other research outputs
 accessible and reusable alongside your primary outputs.
 
-\begin{fullwidth}
+
 	\begin{figure}
 		\centering
 		\includegraphics[width=1.6\linewidth]{diagrams/Analysis}
 		\label{fig:analysis}
 	\end{figure}
-\end{fullwidth}
+
 
 %------------------------------------------------

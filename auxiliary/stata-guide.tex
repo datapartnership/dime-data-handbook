@@ -1,6 +1,6 @@
 %------------------------------------------------
 
-\begin{fullwidth}
+
 
 Most academic programs that prepare students for a career
 in the type of work discussed in this book
@@ -44,7 +44,7 @@ and how you, like an architect,
 can create a blueprint that can be understood and used
 by everyone in your trade.
 
-\end{fullwidth}
+
 
 %------------------------------------------------
 
@@ -169,8 +169,8 @@ After extracting the .zip-file you will find all the code in a folder called \te
 While we use built-in commands as much as possible in this book,
 we point to user-written commands when they provide important new functionality.
 In particular, we point to two suites of Stata commands developed by DIME Analytics,
-\texttt{ietoolkit}\sidenote{\url{https://dimewiki.worldbank.org/ietoolkit}} and
-\texttt{iefieldkit},\sidenote{\url{https://dimewiki.worldbank.org/iefieldkit}}
+\texttt{ietoolkit}\footnote{\url{https://dimewiki.worldbank.org/ietoolkit}} and
+\texttt{iefieldkit},\footnote{\url{https://dimewiki.worldbank.org/iefieldkit}}
 which DIME Analytics wrote to standardize
 core data collection, management, and analysis workflows.
 
@@ -178,7 +178,7 @@ When you encounter code that employs user-written commands,
 you will not be able to run them or read their help files
 until you have installed the commands.
 The most common place to distribute user-written commands for Stata
-is the Boston College Statistical Software Components (SSC) archive.\sidenote{
+is the Boston College Statistical Software Components (SSC) archive.\footnote{
 	\url{https://ideas.repec.org/s/boc/bocode.html}}
 The user-written commands in our code example are all from the SSC archive.
 So, if your installation of Stata does not recognize a command in our code, for example
@@ -206,18 +206,18 @@ so that the user does not have to search for packages manually.
 Programming languages used in computer science
 always have style guides associated with them.
 Sometimes they are official guides that are universally agreed upon,
-such as PEP8 for Python.\sidenote{\url{https://www.python.org/dev/peps/pep-0008}}
+such as PEP8 for Python.\footnote{\url{https://www.python.org/dev/peps/pep-0008}}
 More commonly, there are well-recognized but
-non-official style guides like the JavaScript Standard Style\sidenote{\url{https://standardjs.com/\#the-rules}}
-for JavaScript or Hadley Wickham's style guide for R.\sidenote{\url{https://style.tidyverse.org/syntax.html}}
+non-official style guides like the JavaScript Standard Style\footnote{\url{https://standardjs.com/\#the-rules}}
+for JavaScript or Hadley Wickham's style guide for R.\footnote{\url{https://style.tidyverse.org/syntax.html}}
 Google, for example, maintains is own style guides for all languages
-that are used in its projects.\sidenote{
+that are used in its projects.\footnote{
   \url{https://github.com/google/styleguide}}
 
 Aesthetics is an important part of style guides, but not the main point.
 Neither is telling you which commands to use:
-there are plenty of guides to Stata's extensive functionality.\sidenote{
-  See for example \citet{Mark2012}}
+there are plenty of guides to Stata's extensive functionality.\footnote{
+  See for example \cite{Mark2012}}
 The important function is to allow programmers who are likely to work together
 to share conventions and understandings of what the code is doing.
 Style guides therefore help improve the quality of the code
@@ -463,7 +463,7 @@ Break lines where it makes functional sense.
 You can write comments after \texttt{///} just as with \texttt{//}, and that is usually a good thing.
 
 The \texttt{\#delimit} command should only be used for advanced function programming
-and is officially discouraged in analytical code.\sidenote{\citet{cox2005styleguide}}
+and is officially discouraged in analytical code.\footnote{\cite{cox2005styleguide}}
 Never, for any reason, use \texttt{/* */} to wrap a line:
 it is distracting and difficult to follow compared to the use
 of those characters to write regular comments.
@@ -509,7 +509,7 @@ and compressing the dataset to save disk space and network bandwidth.
 
 If there is a unique ID variable or a set of ID variables,
 the code should test that they uniquelly and
-fully identify the dataset.\sidenote{
+fully identify the dataset.\footnote{
   \url{https://dimewiki.worldbank.org/ID\_Variable\_Properties}}
 ID variables are also perfect variables to sort on,
 and to \texttt{order} first in the dataset.

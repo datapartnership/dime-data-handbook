@@ -1,6 +1,6 @@
 %------------------------------------------------
 
-\begin{fullwidth}
+
 Publication typically involves many iterations of
 data, code, and code output files, with inputs from multiple collaborators.
 This process can quickly become unwieldy.
@@ -38,7 +38,7 @@ functional and informative reproducibility packages.
 In all cases, we note that technology is rapidly evolving
 and that specific tools noted here may not remain cutting-edge,
 but the core principles involved in publication and transparency will endure.
-\end{fullwidth}
+
 
 %------------------------------------------------
 
@@ -49,13 +49,13 @@ Development research is increasingly a collaborative effort.
 This reflects changes in the economics discipline overall:
 the number of sole-authored research outputs is decreasing,
 and the majority of recent papers in top journals have three or more
-authors.\sidenote{\citet{kuldtrend}}
+authors.\footnote{\cite{kuldtrend}}
 As a consequence, documents typically pass back and forth between several writers
 before they are ready for publication or release.
 As in all other stages of the research process,
 effective collaboration requires the adoption of tools and practices
 that enable version control and simultaneous contributions.
-This book, for example, was written in {\LaTeX} and managed on GitHub.\sidenote{\url{
+This book, for example, was written in {\LaTeX} and managed on GitHub.\footnote{\url{
 		https://github.com/worldbank/dime-data-handbook}}
 As we outlined in the previous chapter,
 \textbf{dynamic documents} are a way to simplify writing workflows:
@@ -110,7 +110,7 @@ and, last but not least, references and citations.
 
 % managing references in LaTeX
 One of the most important tools available in {\LaTeX}
-is the BibTeX citation and bibliography manager.\sidenote{\citet{kopka1995guide}}
+is the BibTeX citation and bibliography manager.\footnote{\cite{kopka1995guide}}
 BibTeX keeps all the references you might use in a \texttt{.bib} file,
 then references them using a simple command typed directly in the document.
 Specifically, {\LaTeX} inserts references in text using the \texttt{cite} command.\index{bibliography management}
@@ -133,12 +133,12 @@ Because it follows a standard code format,
 {\LaTeX} has one more useful trick:
 you can convert the raw document into Word
 or a number of other formats
-using utilities such as \texttt{pandoc}.\sidenote{\url{https://pandoc.org}}
+using utilities such as \texttt{pandoc}.\footnote{\url{https://pandoc.org}}
 Even though conversion to Word is required
 for a number of academic publishers and can even be preferred for some policy outputs,
 we still recommend using {\LaTeX} to prepare these when possible.
 You should export to Word only at the final stage, when submitting materials.
-You can also use a CSL (Citation Styles Library) file\sidenote{
+You can also use a CSL (Citation Styles Library) file\footnote{
   \url{https://github.com/citation-style-language/styles}}
 for nearly any journal and have it applied automatically in this process.
 Therefore, even in the case where you are required to provide
@@ -156,11 +156,11 @@ Because it is written in a plain text file format,
 This makes it possible to manage contributions and version histories
 using the same system we recommend for data work.
 DIME Analytics has created a variety of templates and resources
-that you can adapt for your own team.\sidenote{
+that you can adapt for your own team.\footnote{
 	\url{https://github.com/worldbank/DIME-LaTeX-Templates}}
-Integrated editing and compiling tools like TeXStudio\sidenote{
+Integrated editing and compiling tools like TeXStudio\footnote{
   \url{https://www.texstudio.org}}
-and \texttt{atom-latex}\sidenote{
+and \texttt{atom-latex}\footnote{
   \url{https://atom.io/packages/atom-latex}}
 offer the most flexibility to work with {\LaTeX} in teams.
 
@@ -177,7 +177,7 @@ Cloud-based implementations of {\LaTeX} can make it easier for your team to use
 {\LaTeX} without all members having to invest in new skills
 or set up matching software environments,
 and can be particularly useful for first forays into {\LaTeX} writing.
-One example of this is Overleaf.\sidenote{
+One example of this is Overleaf.\footnote{
   \url{https://www.overleaf.com/}}
 Most such sites offer a subscription feature
 with useful extensions and various sharing permissions,
@@ -242,8 +242,8 @@ Second, you should separately catalog
 the analysis dataset used for the research output you are publishing.
 This is typically included in the replication package for the research output,
 and should assume that another researcher is starting work
-with only the published clean data in hand.\sidenote{
-For an example, see the replication package for \citet{kondylis2020demand}
+with only the published clean data in hand.\footnote{
+For an example, see the replication package for \cite{kondylis2020demand}
 in \url{https://github.com/worldbank/rio-safe-space}.}
 The package should also include the data construction scripts
 that create transformed and derived indicators,
@@ -264,7 +264,7 @@ If you are following the workflow outlined in this book,
 you should have already removed direct identifiers as a first step after acquiring the data
 (see the discussion of initial de-identification in Chapter 5).
 For the final de-identification, you should additionally remove
-indirect identifiers, and assess the statistical disclosure risk of your data.\sidenote{
+indirect identifiers, and assess the statistical disclosure risk of your data.\footnote{
 	\textbf{Disclosure risk:} the likelihood that a released data record can be associated with an individual or organization.}\index{statistical disclosure}
 Unlike direct identifiers, for which a link (or lack thereof) to public information is verifiable,
 indirect identifiers require an assessment of the likelihood
@@ -272,7 +272,7 @@ that an individual can be singled out in the data
 and then linked to public information using combinations of available data.
 For example, seemingly innocuous variables such as US zip code,
 gender, and date of birth uniquely identify
-approximately 87\% of the US population.\sidenote{\citet{Sweeney2000}}
+approximately 87\% of the US population.\footnote{\cite{Sweeney2000}}
 In development data, information such as the size of a household,
 the ages and marital statuses of the household members,
 and the types of work or schooling they engage in
@@ -281,8 +281,8 @@ from a sufficiently small group.
 
 % tools for final de-identification: pii_detection, pii-scan, sdcMicro
 A number of tools have been developed to help researchers de-identify data.\index{final de-identification}
-At this stage, the World Bank's \texttt{sdcMicro} tool,\sidenote{
-	\citet{benschop2019statistical}}
+At this stage, the World Bank's \texttt{sdcMicro} tool,\footnote{
+	\cite{benschop2019statistical}}
 has a useful feature
 that allows you to assess the uniqueness of the records in your data.
 It produces simple measures of the identifiability of records from
@@ -297,7 +297,7 @@ There will almost always be a trade-off between accuracy and privacy.
 For publicly disclosed data, you should favor privacy.
 Stripping identifying variables from a dataset may not be sufficient to protect respondent privacy,
 due to the risk of re-identification.
-One solution is to add noise to data, as the U.S. Census Bureau has proposed.\sidenote{\citet{abowd2018us}}
+One solution is to add noise to data, as the U.S. Census Bureau has proposed.\footnote{\cite{abowd2018us}}
 This makes the trade-off between data accuracy and privacy explicit.
 But there are not, as of yet, established norms for such ``differential privacy'' approaches:
 most approaches fundamentally rely on judging ``how harmful'' information disclosure would be.
@@ -332,7 +332,7 @@ if done under careful data security protocols and approved by an IRB.
 Publicly documenting all original data acquired as part of a research project
 is an important contribution in its own right.
 Cataloging and/or archiving original datasets
-is a significant contribution in addition to any publication of analysis results.\sidenote{
+is a significant contribution in addition to any publication of analysis results.\footnote{
 	\url{https://dimewiki.worldbank.org/Publishing_Data}}
 Publicly releasing data allows other researchers
 to validate the mechanical construction of your results,
@@ -347,25 +347,25 @@ where you will publish your data.\index{publishing data}
 A variety of options exist;
 it is important to choose one that allows you to obtain a digital object identifier (DOI)
 for the location of your data (even if its URL changes),
-and a formal citation for your data, so you can reference it in other research outputs.\sidenote{\url{https://www.doi.org}}
+and a formal citation for your data, so you can reference it in other research outputs.\footnote{\url{https://www.doi.org}}
 Two common platforms for development data are the World Bank's Development Data Hub
 and Harvard University's Dataverse.
-The World Bank's Development Data Hub\sidenote{
+The World Bank's Development Data Hub\footnote{
 	\url{https://datacatalog.worldbank.org}}
-includes a Microdata Catalog\sidenote{
+includes a Microdata Catalog\footnote{
   \url{https://microdata.worldbank.org}}
 and a Geospatial Catalog,
-where researchers can publish data and documentation for their projects.\sidenote{
+where researchers can publish data and documentation for their projects.\footnote{
   \url{https://dimewiki.worldbank.org/Microdata\_Catalog}}
 The Harvard Dataverse publishes both data and code,
-and its Datahub for Field Experiments in Economics and Public Policy\sidenote{
+and its Datahub for Field Experiments in Economics and Public Policy\footnote{
 	\url{https://dataverse.harvard.edu} and
 	\url{https://dataverse.harvard.edu/dataverse/DFEEP}}
 is especially relevant for impact evaluations.
 Both the World Bank Microdata Catalog and the Harvard Dataverse
 create data citations for deposited entries.
 DIME has its own collection of datasets in the Microdata Catalog,
-where data from our projects is published.\sidenote{\url{
+where data from our projects is published.\footnote{\url{
 		https://microdata.worldbank.org/catalog/dime}}
 
 % check what you can and cannot publish
@@ -387,7 +387,7 @@ and should also be included in the replication package.
 
 % licensing published data
 When publishing data,
-you will decide how the data may be used and what license you will assign to it.\sidenote{
+you will decide how the data may be used and what license you will assign to it.\footnote{
   \url{https://dimewiki.worldbank.org/Publishing_Data}}\index{data licensing}
 Make sure you understand the rights associated with any data release
 and communicate them to its future users.
@@ -396,7 +396,7 @@ You should prefer to offer a license that is explicit
 and details whether and how specific individuals may access the data.
 Terms of use available in the World Bank Microdata Catalog include,
 in order of increasing restrictiveness:
-\textit{open access}, \textit{direct access}, and \textit{licensed access}.\sidenote{
+\textit{open access}, \textit{direct access}, and \textit{licensed access}.\footnote{
   \url{https://microdata.worldbank.org/index.php/terms-of-use}}
 \textit{Open access} data is freely available to anyone, and simply requires attribution.
 \textit{Direct access} data is available to registered users who agree
@@ -431,7 +431,7 @@ so that others can learn from your work and adapt it as they like.
 
 Major journals now often require that you provide both the data and code required to recreate your results.
 Some even require being able to reproduce the results themselves
-before they will approve a paper for publication.\sidenote{\citet{vilhuber2020report}}
+before they will approve a paper for publication.\footnote{\cite{vilhuber2020report}}
 This set of materials, taken together,
 is often referred to as a \textbf{reproducibility package}.\index{reproducibility package}
 If you have followed the workflows described in this book,
@@ -470,7 +470,7 @@ We have adopted several practices and requirements to support the production
 of high-quality reproducibility packages.
 The materials for these practices are publicly available,
 so you can use them to check the reproducibility of your own work.
-This reproducibility check is initiated by submitting the Reproducibility Package Checklist.\sidenote{
+This reproducibility check is initiated by submitting the Reproducibility Package Checklist.\footnote{
 	\url{https://github.com/worldbank/dime-standards}}
 DIME projects are required to organize code
 with a master script, to facilitate handovers across team members
@@ -496,7 +496,7 @@ In many cases you can even directly provide the underlying code
 for any user-installed packages that are needed to ensure forward-compatibility.
 Make sure system settings like software version and memory settings are defined.
 The \texttt{ieboilstart} command in \texttt{ietoolkit} defines and applies these settings
-for a chosen Stata version.\sidenote{\url{https://dimewiki.worldbank.org/ieboilstart}}
+for a chosen Stata version.\footnote{\url{https://dimewiki.worldbank.org/ieboilstart}}
 
 % tracking code and outputs
 Finally, make sure that code inputs and outputs are clearly identified.
@@ -515,7 +515,7 @@ but still archived for transparency.
 
 % finding a place to publish the package
 Once your replication package is prepared for public release,
-you need to find a place to publish your materials.\sidenote{
+you need to find a place to publish your materials.\footnote{
   \url{https://dimewiki.worldbank.org/Reproducible_Research}}
 At the time of writing, there is no consensus on the best solution for publishing code,
 and there are a variety of archives and storage providers
@@ -557,15 +557,15 @@ It is built to version control code, and to facilitate collaboration on it.
 It is not an archive, meaning that it does not guarantee the permanence
 of uploaded materials or the access URL,
 and it does not manage citations or non-code licenses by default.
-One suggestion is to combine GitHub with the Open Science Framework,\sidenote{
+One suggestion is to combine GitHub with the Open Science Framework,\footnote{
   \url{https://osf.io}}
 as OSF can easily link to and import material from GitHub and
 apply a permanent URL, DOI, formal citation, general license, and archival services to it.
 
 % Other options: data verse, osf, research gate. what to look for before deciding
-Other options include the Harvard Dataverse\sidenote{
+Other options include the Harvard Dataverse\footnote{
   \url{https://dataverse.harvard.edu}}
-and ResearchGate.\sidenote{
+and ResearchGate.\footnote{
   \url{https://www.researchgate.net}}
 Any of these archival services is acceptable --
 the main requirement is that the system can handle
@@ -577,7 +577,7 @@ You can even combine more than one tool if you prefer,
 as long as they clearly reference each other.
 For example, one could publish code and the corresponding license on GitHub
 and point to data published on the World Bank Microdata Catalog.
-Emerging technologies such as the ``containerization'' approach of CodeOcean\sidenote{
+Emerging technologies such as the ``containerization'' approach of CodeOcean\footnote{
   \url{https://codeocean.com}}
 offer to store both code and data in one repository,
 and also provide an online workspace in which others can execute and modify your code
@@ -618,10 +618,9 @@ since all your research materials are
 continuously organized, shareable, secure, documented, and readable,
 they are both valuable to you and others and easy to provide access to.
 
-\begin{fullwidth}
+
 	\begin{figure}
 		\centering
 		\includegraphics[width=1.5\linewidth]{diagrams/Publication}
 		\label{fig:publication}
 	\end{figure}
-\end{fullwidth}
